@@ -1,0 +1,15 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+<!-- Base application theme. -->
+<style name="Base.Theme.MyeCommerceApp" parent="Theme.Material3.DayNight.NoActionBar">
+    <item name="colorPrimary">@color/g_blue</item>
+    <item name="colorPrimaryVariant">@color/g_blue</item>
+    <item name="colorOnPrimary">@color/white</item>
+    <!-- Secondary brand color. -->
+    <item name="colorOnSecondary">@color/black</item>
+    <!-- Status bar color. -->
+    <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+    <!-- Customize your theme here. -->
+</style>
+
+<style name="Theme.MyeCommerceApp" parent="Base.Theme.MyeCommerceApp" />
+</resources>

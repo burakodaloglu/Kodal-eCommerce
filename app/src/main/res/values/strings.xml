@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Kodal</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="categories">Categories</string>
+    <string name="somethings_wrong">Something\'s wrong!</string>
+    <string name="accept">Tamam</string>
+    <string name="title_activity_shopping">ShoppingActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="rightAddress">The Right Address\nFor Shopping\nAnyday</string>
+    <string name="quality">It is now very esay to reach the\nbest quality among the\nproducts on the internet</string>
+    <string name="g_let_s_register">Let\'s Register</string>
+    <string name="g_do_you_have_an_account_log_in">Do you have an account? Log in</string>
+    <string name="lowercase_letters">Lowercase Letters</string>
+    <string name="uppercase_letters">Uppercase Letters</string>
+    <string name="digits">Digits</string>
+    <string name="special_characters">Special Characters</string>
+</resources>
