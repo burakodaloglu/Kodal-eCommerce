@@ -29,7 +29,7 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
             }
             btnLogin.setOnClickListener {
                 val email = binding.etEmail.text.toString()
-                val password = binding.etEmail.text.toString()
+                val password = binding.etPassword.text.toString()
                 if (checkRegex()) {
                     signupViewModel.signUp(SignupBody(email, password))
                 }

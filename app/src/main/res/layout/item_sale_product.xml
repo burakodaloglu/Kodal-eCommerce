@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="saleProduct"
+            type="com.burakkodaloglu.my_e_commerce_app.domain.model.Product" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        app:cardCornerRadius="10dp"
+        app:strokeColor="@color/gri"
+        app:strokeWidth="1dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/beyazımsı"
+            android:padding="12dp">
+
+            <ImageView
+                android:id="@+id/img_product"
+                setImage="@{saleProduct.imageOne}"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_product_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:ellipsize="end"
+                android:lines="1"
+                android:text="@{saleProduct.title}"
+                android:textAlignment="textStart"
+                android:textColor="@color/g_blue"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="@+id/img_product"
+                app:layout_constraintStart_toStartOf="@+id/img_product"
+                app:layout_constraintTop_toBottomOf="@+id/img_product" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_product_price"
+                saleTextPrice="@{saleProduct.salePrice}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text=""
+                android:textSize="14sp"
+                android:fontFamily="@font/poppins_light"
+                android:textStyle="bold"
+                android:textColor="@color/g_blue"
+                app:layout_constraintEnd_toEndOf="@+id/tv_product_title"
+                app:layout_constraintStart_toStartOf="@+id/tv_product_title"
+                app:layout_constraintTop_toBottomOf="@+id/tv_product_title" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_sale_price"
+                priceValue="@{saleProduct.price}"
+                salePrice="@{saleProduct.salePrice}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:text=""
+                android:fontFamily="@font/poppins_light"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="@color/g_blue"
+                app:layout_constraintEnd_toEndOf="@+id/tv_product_price"
+                app:layout_constraintStart_toStartOf="@+id/tv_product_price"
+                app:layout_constraintTop_toBottomOf="@+id/tv_product_price" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="@{saleProduct.category}"
+                android:textColor="@color/gri"
+                app:layout_constraintEnd_toEndOf="@+id/tv_sale_price"
+                app:layout_constraintStart_toStartOf="@+id/tv_sale_price"
+                app:layout_constraintTop_toBottomOf="@+id/tv_sale_price" />
+
+            <ImageView
+                android:id="@+id/img_favorite"
+                favoriteState="@{saleProduct.favorite}"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:srcCompat="@drawable/ic_favorite_unselected"
+                tools:ignore="MissingConstraints" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

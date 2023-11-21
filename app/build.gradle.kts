@@ -3,6 +3,7 @@ plugins {
     id("org.jetbrains.kotlin.android")
     id("com.google.dagger.hilt.android")
     id ("androidx.navigation.safeargs.kotlin")
+    id ("kotlin-parcelize")
     kotlin("kapt")
 }
 
@@ -97,6 +98,9 @@ dependencies {
     // Coroutines
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+
+    // Glide
+    implementation ("com.github.skydoves:landscapist-glide:2.2.3")
     /*
         //room
         implementation("androidx.room:room-runtime:2.6.0")

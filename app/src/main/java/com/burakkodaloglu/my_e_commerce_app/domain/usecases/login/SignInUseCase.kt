@@ -11,6 +11,4 @@ class SignInUseCase @Inject constructor(private val productRepository: ProductRe
     SuspendUseCase<LoginBody, AppResult<LoginResponse>>() {
     override suspend fun execute(params: LoginBody): AppResult<LoginResponse> =
         productRepository.login(params)
-
-
 }

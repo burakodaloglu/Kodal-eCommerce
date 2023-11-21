@@ -5,7 +5,6 @@ import com.burakkodaloglu.my_e_commerce_app.data.source.remote.ProductService
 import com.burakkodaloglu.my_e_commerce_app.domain.model.AppResponse
 import com.burakkodaloglu.my_e_commerce_app.util.constants.Constants.BASE_URL
 import com.burakkodaloglu.my_e_commerce_app.util.constants.Constants.STORE
-import com.burakkodaloglu.my_e_commerce_app.util.retrofit.ResultCallAdapter
 import com.burakkodaloglu.my_e_commerce_app.util.retrofit.ResultCallAdapterFactory
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder
@@ -21,7 +20,6 @@ import okhttp3.ResponseBody
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import retrofit2.converter.moshi.MoshiConverterFactory
-import retrofit2.create
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
