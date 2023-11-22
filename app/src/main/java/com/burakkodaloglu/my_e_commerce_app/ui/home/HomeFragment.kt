@@ -1,12 +1,12 @@
 package com.burakkodaloglu.my_e_commerce_app.ui.home
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
+import androidx.viewpager2.widget.MarginPageTransformer
 import com.burakkodaloglu.my_e_commerce_app.R
 import com.burakkodaloglu.my_e_commerce_app.databinding.FragmentHomeBinding
 import com.burakkodaloglu.my_e_commerce_app.util.common.ManagerDialog
@@ -44,7 +44,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                                 val r = 1 - abs(position)
                                 page.scaleY = (0.85f + r * 0.15f)
                             }
-
                             vpSaleProduct.apply {
                                 adapter = saleProductsAdapter
                                 clipToPadding = false

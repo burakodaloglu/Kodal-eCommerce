@@ -4,18 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/blury_background"
+    android:background="@color/white"
     tools:context=".ui.signin.SignInFragment">
 
     <TextView
         android:id="@+id/tvAppName"
-        style="@style/h3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:drawableStart="@drawable/logo"
-        android:drawablePadding="6dp"
         android:text="Kodal"
-        android:textStyle="bold"
+        android:drawablePadding="5dp"
+        android:textColor="@color/black"
+        android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/tv_letslogin"
         app:layout_constraintStart_toStartOf="@+id/tv_letslogin"
         app:layout_constraintTop_toTopOf="parent"
@@ -23,28 +23,33 @@
 
     <TextView
         android:id="@+id/tv_letslogin"
-        style="@style/h4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
+        android:fontFamily="@font/poppins_thin"
         android:gravity="center"
         android:text="Let's Login"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="32sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/tv_donthaveanaccount"
         app:layout_constraintStart_toStartOf="@+id/tv_donthaveanaccount"
         app:layout_constraintTop_toBottomOf="@+id/tvAppName" />
 
     <TextView
         android:id="@+id/tv_donthaveanaccount"
-        style="@style/h2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:fontFamily="@font/poppins_light"
         android:gravity="center"
         android:text="Don't have an account? Register"
         android:textAlignment="center"
+        android:textColor="@color/dark_green"
+        android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/til_email"
-        app:layout_constraintStart_toStartOf="@+id/til_email"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_letslogin" />
 
     <com.google.android.material.textfield.TextInputLayout
@@ -61,7 +66,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_donthaveanaccount"
         app:startIconDrawable="@drawable/ic_email"
-        app:startIconTint="@color/g_blue">
+        app:startIconTint="@color/army_green">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_email"
@@ -78,14 +83,14 @@
         android:layout_marginTop="8dp"
         android:hint="Password"
         app:helperText=""
-        app:helperTextTextColor="@color/g_red"
+        app:helperTextTextColor="@color/red"
         app:layout_constraintBottom_toTopOf="@+id/login_btn"
         app:layout_constraintEnd_toEndOf="@+id/til_email"
         app:layout_constraintStart_toStartOf="@+id/til_email"
         app:layout_constraintTop_toBottomOf="@+id/til_email"
         app:passwordToggleEnabled="true"
         app:startIconDrawable="@drawable/ic_lock"
-        app:startIconTint="@color/g_blue">
+        app:startIconTint="@color/army_green">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_password"
@@ -97,14 +102,16 @@
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login_btn"
-        style="@style/blueButtonStyle"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@color/army_green"
         android:text="Login"
+        android:textColor="@color/white"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/til_password"
         app:layout_constraintStart_toStartOf="@+id/til_password"
         app:layout_constraintTop_toBottomOf="@+id/til_password" />
-    
+
 </androidx.constraintlayout.widget.ConstraintLayout>
