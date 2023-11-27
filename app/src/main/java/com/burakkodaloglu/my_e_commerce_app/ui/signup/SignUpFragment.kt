@@ -41,7 +41,7 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
     private fun initObserver() {
         signupViewModel.signUpLiveData.observe(viewLifecycleOwner) {
             it.doOnSuccess {
-                Toast.makeText(requireContext(), "Hesabınız oluşturuldu.", Toast.LENGTH_LONG).show()
+                Toast.makeText(requireContext(), "Your account has been created.", Toast.LENGTH_LONG).show()
                 findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
             }.doOnFailure {
                 managerAlertDialog.showAlertDialog(

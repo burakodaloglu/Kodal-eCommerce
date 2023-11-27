@@ -1,4 +1,4 @@
-package com.burakkodaloglu.my_e_commerce_app.ui.home
+package com.burakkodaloglu.my_e_commerce_app.ui.home.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -28,13 +28,9 @@ class SaleProductsAdapter : RecyclerView.Adapter<SaleProductsAdapter.ProductsVie
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: Product) {
-
             with(binding) {
-
                 saleProduct = item
-
                 imgFavorite.setOnClickListener {
-
                     if (item.isFavorite) {
                         onFavoriteClick(item)
                         imgFavorite.setImageResource(R.drawable.ic_favorite_unselected)
@@ -43,8 +39,7 @@ class SaleProductsAdapter : RecyclerView.Adapter<SaleProductsAdapter.ProductsVie
                         imgFavorite.setImageResource(R.drawable.ic_favorite_selected)
                     }
                 }
-
-                imgProduct.setOnClickListener {
+                cardView.setOnClickListener {
                     onProductClick(item)
                 }
             }
