@@ -1,4 +1,4 @@
-package com.burakkodaloglu.my_e_commerce_app.domain.model
+package com.burakkodaloglu.my_e_commerce_app.data.model
 
 data class User(
     val email: String,

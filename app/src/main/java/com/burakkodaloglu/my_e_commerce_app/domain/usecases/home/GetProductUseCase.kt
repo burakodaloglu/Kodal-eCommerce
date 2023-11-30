@@ -2,7 +2,7 @@ package com.burakkodaloglu.my_e_commerce_app.domain.usecases.home
 
 import com.burakkodaloglu.my_e_commerce_app.domain.AppResult
 import com.burakkodaloglu.my_e_commerce_app.domain.SuspendUseCase
-import com.burakkodaloglu.my_e_commerce_app.domain.model.ProductBody
+import com.burakkodaloglu.my_e_commerce_app.data.model.ProductBody
 import com.burakkodaloglu.my_e_commerce_app.domain.repository.ProductRepository
 import javax.inject.Inject
 

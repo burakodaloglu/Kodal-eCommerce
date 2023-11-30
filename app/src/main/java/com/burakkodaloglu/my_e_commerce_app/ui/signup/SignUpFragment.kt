@@ -8,7 +8,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.burakkodaloglu.my_e_commerce_app.R
 import com.burakkodaloglu.my_e_commerce_app.databinding.FragmentSignUpBinding
-import com.burakkodaloglu.my_e_commerce_app.domain.model.SignupBody
+import com.burakkodaloglu.my_e_commerce_app.data.model.SignupBody
 import com.burakkodaloglu.my_e_commerce_app.util.common.ManagerDialog
 import com.burakkodaloglu.my_e_commerce_app.util.common.viewBinding
 import dagger.hilt.android.AndroidEntryPoint

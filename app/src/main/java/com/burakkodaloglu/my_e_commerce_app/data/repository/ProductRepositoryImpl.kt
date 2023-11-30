@@ -1,24 +1,36 @@
 package com.burakkodaloglu.my_e_commerce_app.data.repository
 
+import com.burakkodaloglu.my_e_commerce_app.data.model.CRUD
+import com.burakkodaloglu.my_e_commerce_app.data.model.CategoryBody
+import com.burakkodaloglu.my_e_commerce_app.data.model.LoginBody
+import com.burakkodaloglu.my_e_commerce_app.data.model.LoginResponse
+import com.burakkodaloglu.my_e_commerce_app.data.model.Product
+import com.burakkodaloglu.my_e_commerce_app.data.model.ProductBody
+import com.burakkodaloglu.my_e_commerce_app.data.model.SignupBody
+import com.burakkodaloglu.my_e_commerce_app.data.model.UserResponse
+import com.burakkodaloglu.my_e_commerce_app.data.source.local.ProductDao
 import com.burakkodaloglu.my_e_commerce_app.data.source.remote.ProductService
 import com.burakkodaloglu.my_e_commerce_app.domain.AppResult
-import com.burakkodaloglu.my_e_commerce_app.domain.model.CRUD
-import com.burakkodaloglu.my_e_commerce_app.domain.model.CategoryBody
-import com.burakkodaloglu.my_e_commerce_app.domain.model.LoginBody
-import com.burakkodaloglu.my_e_commerce_app.domain.model.LoginResponse
-import com.burakkodaloglu.my_e_commerce_app.domain.model.ProductBody
-import com.burakkodaloglu.my_e_commerce_app.domain.model.SignupBody
-import com.burakkodaloglu.my_e_commerce_app.domain.model.UserResponse
 import com.burakkodaloglu.my_e_commerce_app.domain.repository.ProductRepository
 import javax.inject.Inject
 
-class ProductRepositoryImpl @Inject constructor(private val productService: ProductService) :
-    ProductRepository {
+class ProductRepositoryImpl @Inject constructor(
+    private val productService: ProductService,
+    private val productDao: ProductDao
+) : ProductRepository {
+    override suspend fun getFavoriteProduct(): List<Product> = productDao.getFavoriteProduct()
+
+    override suspend fun deleteProductFavorites(productEntity: Product) =
+        productDao.deleteFavoriteProduct(productEntity)
+
+    override suspend fun addToFavorite(productEntity: Product) =
+        productDao.addFavoriteProduct(productEntity)
 
     override suspend fun getUser(userId: String): AppResult<UserResponse> =
         productService.getUser(userId)
 
     override suspend fun getProduct(): AppResult<ProductBody> = productService.getProduct()
+
 
     /*
     Bu fonksiyon, productService üzerinden getCategory(category)

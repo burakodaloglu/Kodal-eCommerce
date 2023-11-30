@@ -2,8 +2,8 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("com.google.dagger.hilt.android")
-    id ("androidx.navigation.safeargs.kotlin")
-    id ("kotlin-parcelize")
+    id("androidx.navigation.safeargs.kotlin")
+    id("kotlin-parcelize")
     kotlin("kapt")
 }
 
@@ -100,14 +100,13 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
 
     // Glide
-    implementation ("com.github.skydoves:landscapist-glide:2.2.3")
-    /*
-        //room
-        implementation("androidx.room:room-runtime:2.6.0")
-        kapt("androidx.room:room-compiler:2.6.0")
-        implementation("androidx.room:room-ktx:2.6.0")
+    implementation("com.github.skydoves:landscapist-glide:2.2.3")
 
-     */
+    //Room
+    implementation("androidx.room:room-runtime:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
+
 }
 kapt {
     correctErrorTypes = true

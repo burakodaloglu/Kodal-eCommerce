@@ -1,17 +1,22 @@
 package com.burakkodaloglu.my_e_commerce_app.domain.repository
 
 import com.burakkodaloglu.my_e_commerce_app.domain.AppResult
-import com.burakkodaloglu.my_e_commerce_app.domain.model.CRUD
-import com.burakkodaloglu.my_e_commerce_app.domain.model.CategoryBody
-import com.burakkodaloglu.my_e_commerce_app.domain.model.LoginBody
-import com.burakkodaloglu.my_e_commerce_app.domain.model.LoginResponse
-import com.burakkodaloglu.my_e_commerce_app.domain.model.ProductBody
-import com.burakkodaloglu.my_e_commerce_app.domain.model.SignupBody
-import com.burakkodaloglu.my_e_commerce_app.domain.model.UserResponse
+import com.burakkodaloglu.my_e_commerce_app.data.model.CRUD
+import com.burakkodaloglu.my_e_commerce_app.data.model.CategoryBody
+import com.burakkodaloglu.my_e_commerce_app.data.model.LoginBody
+import com.burakkodaloglu.my_e_commerce_app.data.model.LoginResponse
+import com.burakkodaloglu.my_e_commerce_app.data.model.Product
+import com.burakkodaloglu.my_e_commerce_app.data.model.ProductBody
+import com.burakkodaloglu.my_e_commerce_app.data.model.SignupBody
+import com.burakkodaloglu.my_e_commerce_app.data.model.UserResponse
 
 interface ProductRepository {
+    suspend fun getFavoriteProduct(): List<Product>
+    suspend fun deleteProductFavorites(productEntity: Product)
+    suspend fun addToFavorite(productEntity: Product)
 
     suspend fun getProduct(): AppResult<ProductBody>
+
     /*
      Bu fonksiyon, belirli bir kategoriye ait ürünleri almak için kullanılır.
      category parametresi, istenen kategoriyi belirtmek için kullanılır.

@@ -1,7 +1,7 @@
 package com.burakkodaloglu.my_e_commerce_app.util.storage
 
 import android.content.Context
-import com.burakkodaloglu.my_e_commerce_app.domain.model.LoginResponse
+import com.burakkodaloglu.my_e_commerce_app.data.model.LoginResponse
 
 class SharedPrefManager private constructor(mCtx: Context) {
 

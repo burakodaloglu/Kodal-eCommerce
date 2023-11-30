@@ -4,8 +4,8 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.burakkodaloglu.my_e_commerce_app.domain.AppResult
-import com.burakkodaloglu.my_e_commerce_app.domain.model.CRUD
-import com.burakkodaloglu.my_e_commerce_app.domain.model.SignupBody
+import com.burakkodaloglu.my_e_commerce_app.data.model.CRUD
+import com.burakkodaloglu.my_e_commerce_app.data.model.SignupBody
 import com.burakkodaloglu.my_e_commerce_app.domain.usecases.register.SignupUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch

@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
             name="product"
-            type="com.burakkodaloglu.my_e_commerce_app.domain.model.Product"/>
+            type="com.burakkodaloglu.my_e_commerce_app.data.model.Product"/>
     </data>
 
 <com.google.android.material.card.MaterialCardView

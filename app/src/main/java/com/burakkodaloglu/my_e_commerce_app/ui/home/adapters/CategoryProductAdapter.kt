@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.burakkodaloglu.my_e_commerce_app.databinding.ItemProductsBinding
-import com.burakkodaloglu.my_e_commerce_app.domain.model.Product
+import com.burakkodaloglu.my_e_commerce_app.data.model.Product
 import com.burakkodaloglu.my_e_commerce_app.ui.home.HomeFragmentDirections
 
 class CategoryProductsAdapter : RecyclerView.Adapter<CategoryProductsAdapter.ProductsViewHolder>() {

@@ -24,7 +24,10 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initObserver()
-
+        with(binding) {
+            imgFavorite.setOnClickListener { detailViewModel.setFavoriteState() }
+            imgBack.setOnClickListener { findNavController().popBackStack() }
+        }
     }
 
     private fun initObserver() {
@@ -56,10 +59,6 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
                     )
                 }
             }
-            imgBack.setOnClickListener {
-                findNavController().popBackStack()
-            }
-            imgFavorite.setOnClickListener { detailViewModel.setFavoriteState() }
         }
     }
 }

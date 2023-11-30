@@ -2,7 +2,7 @@ package com.burakkodaloglu.my_e_commerce_app.di
 
 import android.util.Log
 import com.burakkodaloglu.my_e_commerce_app.data.source.remote.ProductService
-import com.burakkodaloglu.my_e_commerce_app.domain.model.AppResponse
+import com.burakkodaloglu.my_e_commerce_app.data.model.AppResponse
 import com.burakkodaloglu.my_e_commerce_app.util.constants.Constants.BASE_URL
 import com.burakkodaloglu.my_e_commerce_app.util.constants.Constants.STORE
 import com.burakkodaloglu.my_e_commerce_app.util.retrofit.ResultCallAdapterFactory

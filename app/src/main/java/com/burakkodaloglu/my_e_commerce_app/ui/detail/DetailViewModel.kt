@@ -4,12 +4,20 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
-import com.burakkodaloglu.my_e_commerce_app.domain.model.Product
+import androidx.lifecycle.viewModelScope
+import com.burakkodaloglu.my_e_commerce_app.data.model.Product
+import com.burakkodaloglu.my_e_commerce_app.domain.usecases.favorite.AddFavoriteUseCase
+import com.burakkodaloglu.my_e_commerce_app.domain.usecases.favorite.DeleteProductFavoriteUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class DetailViewModel @Inject constructor(savedStateHandle: SavedStateHandle) : ViewModel() {
+class DetailViewModel @Inject constructor(
+    private val addFavoriteUseCase: AddFavoriteUseCase,
+    private val deleteProductFavoriteUseCase: DeleteProductFavoriteUseCase,
+    savedStateHandle: SavedStateHandle
+) : ViewModel() {
 
     private val _product = MutableLiveData<Product>()
     val product: LiveData<Product> = _product
@@ -21,6 +29,17 @@ class DetailViewModel @Inject constructor(savedStateHandle: SavedStateHandle) : 
 
     init {
         getProduct()
+        _isFavorite.value=productModel?.isFavorite
+    }
+
+    fun deleteFavoriteProduct(product: Product) {
+        viewModelScope.launch { deleteProductFavoriteUseCase(product) }
+    }
+
+    fun addFavoriteProduct(product: Product) {
+        viewModelScope.launch {
+            addFavoriteUseCase(product)
+        }
     }
 
     private fun getProduct() {
@@ -28,11 +47,14 @@ class DetailViewModel @Inject constructor(savedStateHandle: SavedStateHandle) : 
             _product.value = it
         }
     }
+
     fun setFavoriteState() {
         productModel?.let {
             if (_isFavorite.value == true) {
+                deleteFavoriteProduct(it)
                 _isFavorite.value = false
             } else {
+                addFavoriteProduct(it)
                 _isFavorite.value = true
             }
         }

@@ -1,13 +1,13 @@
 package com.burakkodaloglu.my_e_commerce_app.data.source.remote
 
 import com.burakkodaloglu.my_e_commerce_app.domain.AppResult
-import com.burakkodaloglu.my_e_commerce_app.domain.model.CRUD
-import com.burakkodaloglu.my_e_commerce_app.domain.model.CategoryBody
-import com.burakkodaloglu.my_e_commerce_app.domain.model.LoginBody
-import com.burakkodaloglu.my_e_commerce_app.domain.model.LoginResponse
-import com.burakkodaloglu.my_e_commerce_app.domain.model.ProductBody
-import com.burakkodaloglu.my_e_commerce_app.domain.model.SignupBody
-import com.burakkodaloglu.my_e_commerce_app.domain.model.UserResponse
+import com.burakkodaloglu.my_e_commerce_app.data.model.CRUD
+import com.burakkodaloglu.my_e_commerce_app.data.model.CategoryBody
+import com.burakkodaloglu.my_e_commerce_app.data.model.LoginBody
+import com.burakkodaloglu.my_e_commerce_app.data.model.LoginResponse
+import com.burakkodaloglu.my_e_commerce_app.data.model.ProductBody
+import com.burakkodaloglu.my_e_commerce_app.data.model.SignupBody
+import com.burakkodaloglu.my_e_commerce_app.data.model.UserResponse
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST

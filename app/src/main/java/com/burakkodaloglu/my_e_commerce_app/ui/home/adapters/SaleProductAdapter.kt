@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.burakkodaloglu.my_e_commerce_app.R
 import com.burakkodaloglu.my_e_commerce_app.databinding.ItemSaleProductBinding
-import com.burakkodaloglu.my_e_commerce_app.domain.model.Product
+import com.burakkodaloglu.my_e_commerce_app.data.model.Product
 
 class SaleProductsAdapter : RecyclerView.Adapter<SaleProductsAdapter.ProductsViewHolder>() {
 
@@ -39,6 +39,7 @@ class SaleProductsAdapter : RecyclerView.Adapter<SaleProductsAdapter.ProductsVie
                         imgFavorite.setImageResource(R.drawable.ic_favorite_selected)
                     }
                 }
+
                 cardView.setOnClickListener {
                     onProductClick(item)
                 }

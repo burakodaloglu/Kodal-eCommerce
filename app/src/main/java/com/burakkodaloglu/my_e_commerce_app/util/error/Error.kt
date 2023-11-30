@@ -1,6 +1,6 @@
-package com.burakkodaloglu.my_e_commerce_app.domain.error
+package com.burakkodaloglu.my_e_commerce_app.util.error
 
-import com.burakkodaloglu.my_e_commerce_app.domain.model.AppResponse
+import com.burakkodaloglu.my_e_commerce_app.data.model.AppResponse
 import com.burakkodaloglu.my_e_commerce_app.util.extensions.orDefault
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
