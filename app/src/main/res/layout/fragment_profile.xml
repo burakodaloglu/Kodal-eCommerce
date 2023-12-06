@@ -21,6 +21,7 @@
             android:layout_marginStart="121dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="122dp"
+            android:tint="@color/army_green"
             android:src="@drawable/ic_account"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -45,36 +46,11 @@
             android:layout_marginTop="8dp"
             android:text="@{user.email}"
             android:textColor="@color/army_green"
-            app:layout_constraintBottom_toTopOf="@+id/tv_name"
+            app:layout_constraintBottom_toTopOf="@+id/btn_sign_out"
             app:layout_constraintEnd_toEndOf="@+id/tv_email"
             app:layout_constraintStart_toStartOf="@+id/tv_email"
             app:layout_constraintTop_toBottomOf="@+id/tv_email"
             tools:text="gmail.com" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="32dp"
-            android:text="User name"
-            android:textColor="@color/army_green"
-            app:layout_constraintBottom_toTopOf="@+id/tv_user_name"
-            app:layout_constraintEnd_toEndOf="@+id/tv_emailadres"
-            app:layout_constraintStart_toStartOf="@+id/tv_emailadres"
-            app:layout_constraintTop_toBottomOf="@+id/tv_emailadres" />
-
-        <com.google.android.material.textview.MaterialTextView
-            android:id="@+id/tv_user_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@{user.name}"
-            android:textColor="@color/army_green"
-            app:layout_constraintBottom_toTopOf="@+id/btn_sign_out"
-            app:layout_constraintEnd_toEndOf="@+id/tv_name"
-            app:layout_constraintStart_toStartOf="@+id/tv_name"
-            app:layout_constraintTop_toBottomOf="@+id/tv_name"
-            tools:text="userName" />
 
         <Button
             android:id="@+id/btn_sign_out"
@@ -83,13 +59,15 @@
             android:layout_marginStart="16dp"
             android:layout_marginTop="64dp"
             android:layout_marginEnd="16dp"
-            android:text="update"
-            android:textColor="@color/army_green"
+            android:text="Sign out"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textColor="@color/white"
             app:cornerRadius="16dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tv_user_name" />
+            app:layout_constraintTop_toBottomOf="@+id/tv_emailadres" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

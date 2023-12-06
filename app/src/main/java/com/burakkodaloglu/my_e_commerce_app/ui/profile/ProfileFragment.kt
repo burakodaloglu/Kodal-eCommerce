@@ -27,7 +27,7 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         profileViewModel.getUser(userId)
         binding.btnSignOut.setOnClickListener {
             SharedPrefManager.getInstance(requireActivity()).clear()
-            findNavController().navigate(R.id.login_graph)
+            findNavController().navigate(R.id.signInFragment)
         }
     }
 
@@ -35,10 +35,8 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
         profileViewModel.userLiveData.observe(viewLifecycleOwner) {
             it.doOnSuccess {
                 val email = it.user.email
-                val name = it.user.name
                 with(binding) {
                     tvEmailadres.text = email
-                    tvUserName.setText(name)
                 }
             }.doOnFailure {
                 managerAlertDialog.showAlertDialog(

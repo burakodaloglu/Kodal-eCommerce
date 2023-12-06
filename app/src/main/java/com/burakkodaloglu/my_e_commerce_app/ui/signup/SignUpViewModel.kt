@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.burakkodaloglu.my_e_commerce_app.domain.AppResult
 import com.burakkodaloglu.my_e_commerce_app.data.model.CRUD
-import com.burakkodaloglu.my_e_commerce_app.data.model.SignupBody
+import com.burakkodaloglu.my_e_commerce_app.data.model.Signup
 import com.burakkodaloglu.my_e_commerce_app.domain.usecases.register.SignupUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -18,9 +18,9 @@ class SignUpViewModel @Inject constructor(
 
     var signUpLiveData = MutableLiveData<AppResult<CRUD>>()
 
-    fun signUp(signUpBody: SignupBody) {
+    fun signUp(signUp: Signup) {
         viewModelScope.launch {
-            val result = signUpUseCase(signUpBody)
+            val result = signUpUseCase(signUp)
             signUpLiveData.postValue(result)
         }
     }

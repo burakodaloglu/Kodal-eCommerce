@@ -48,5 +48,5 @@ data class Product(
     val isFavorite: Boolean = false,
 
     @ColumnInfo(name = "salePrice")
-    val salePrice: Double?
+    val salePrice: Double
 ) : Parcelable

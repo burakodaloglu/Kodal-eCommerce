@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="cart"
+            type="com.burakkodaloglu.my_e_commerce_app.data.model.Product" />
+        <variable
+            name="count"
+            type="String" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_margin="8dp"
+        android:padding="8dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="4dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img_product"
+                setImage="@{cart.imageOne}"
+                android:layout_width="100dp"
+                android:layout_height="0dp"
+                android:padding="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_product_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_light"
+                android:gravity="center|start"
+                android:maxLines="2"
+                android:text="@{cart.title}"
+                app:layout_constraintBottom_toTopOf="@+id/tv_price"
+                app:layout_constraintEnd_toStartOf="@+id/img_delete"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/img_product"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Product Name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_price"
+                saleTextPrice="@{cart.salePrice}"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:fontFamily="@font/poppins_light"
+                android:textColor="@color/army_green"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/img_decrease"
+                app:layout_constraintStart_toStartOf="@+id/tv_product_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_product_name" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_product_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:ellipsize="end"
+                android:text="@{count}"
+                app:layout_constraintBottom_toBottomOf="@+id/img_decrease"
+                app:layout_constraintEnd_toStartOf="@+id/img_increase"
+                app:layout_constraintStart_toEndOf="@+id/img_decrease"
+                app:layout_constraintTop_toTopOf="@+id/img_decrease" />
+
+            <ImageView
+                android:id="@+id/img_increase"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginStart="10dp"
+                android:elevation="10dp"
+                android:padding="2dp"
+                android:src="@drawable/ic_increase"
+                app:layout_constraintBottom_toBottomOf="@+id/img_decrease"
+                app:layout_constraintStart_toEndOf="@+id/tv_product_count"
+                app:layout_constraintTop_toTopOf="@+id/img_decrease" />
+
+            <ImageView
+                android:id="@+id/img_decrease"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:elevation="10dp"
+                android:padding="2dp"
+                android:src="@drawable/ic_decrease"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/tv_product_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_price" />
+
+            <ImageView
+                android:id="@+id/img_delete"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginEnd="8dp"
+                android:tint="@color/army_green"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_delete" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

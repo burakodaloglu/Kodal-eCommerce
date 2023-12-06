@@ -8,9 +8,10 @@ import com.burakkodaloglu.my_e_commerce_app.databinding.ItemCategoryListBinding
 
 class CategoryListAdapter() :
     RecyclerView.Adapter<CategoryListAdapter.CategoryListViewHolder>() {
-    private val onClick: (String) -> Unit = {}
-    private val categoryList = ArrayList<String>()
-    private var selectedPosition = 0
+
+     var onClick: (String) -> Unit = {}
+     val categoryList = ArrayList<String>()
+     var selectedPosition = 0
 
     inner class CategoryListViewHolder(private val binding: ItemCategoryListBinding) :
         RecyclerView.ViewHolder(binding.root) {

@@ -3,13 +3,12 @@ package com.burakkodaloglu.my_e_commerce_app.ui.signin
 import android.os.Bundle
 import android.util.Patterns
 import android.view.View
-import androidx.core.view.isGone
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.burakkodaloglu.my_e_commerce_app.R
 import com.burakkodaloglu.my_e_commerce_app.databinding.FragmentSignInBinding
-import com.burakkodaloglu.my_e_commerce_app.data.model.LoginBody
+import com.burakkodaloglu.my_e_commerce_app.data.model.Login
 import com.burakkodaloglu.my_e_commerce_app.data.model.LoginResponse
 import com.burakkodaloglu.my_e_commerce_app.util.common.ManagerDialog
 import com.burakkodaloglu.my_e_commerce_app.util.common.viewBinding
@@ -35,7 +34,7 @@ class SignInFragment : Fragment(R.layout.fragment_sign_in) {
                 if (Patterns.EMAIL_ADDRESS.matcher(email)
                         .matches() && isEligibleToLogin(password)
                 ) {
-                    signInViewModel.signin(LoginBody(email, password))
+                    signInViewModel.signin(Login(email, password))
                 }
             }
         }

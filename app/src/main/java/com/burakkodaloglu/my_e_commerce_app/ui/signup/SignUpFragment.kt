@@ -8,7 +8,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.burakkodaloglu.my_e_commerce_app.R
 import com.burakkodaloglu.my_e_commerce_app.databinding.FragmentSignUpBinding
-import com.burakkodaloglu.my_e_commerce_app.data.model.SignupBody
+import com.burakkodaloglu.my_e_commerce_app.data.model.Signup
 import com.burakkodaloglu.my_e_commerce_app.util.common.ManagerDialog
 import com.burakkodaloglu.my_e_commerce_app.util.common.viewBinding
 import dagger.hilt.android.AndroidEntryPoint
@@ -31,7 +31,7 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
                 val email = binding.etEmail.text.toString()
                 val password = binding.etPassword.text.toString()
                 if (checkRegex()) {
-                    signupViewModel.signUp(SignupBody(email, password))
+                    signupViewModel.signUp(Signup(email, password))
                 }
             }
         }

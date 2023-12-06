@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.burakkodaloglu.my_e_commerce_app.domain.AppResult
-import com.burakkodaloglu.my_e_commerce_app.data.model.LoginBody
+import com.burakkodaloglu.my_e_commerce_app.data.model.Login
 import com.burakkodaloglu.my_e_commerce_app.data.model.LoginResponse
 import com.burakkodaloglu.my_e_commerce_app.domain.usecases.login.SignInUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -16,9 +16,9 @@ class SignInViewModel @Inject constructor(private val signInUseCase: SignInUseCa
 
     var signinLiveData = MutableLiveData<AppResult<LoginResponse>>()
 
-    fun signin(loginBody: LoginBody) {
+    fun signin(login: Login) {
         viewModelScope.launch {
-            val result = signInUseCase(loginBody)
+            val result = signInUseCase(login)
             signinLiveData.postValue(result)
         }
     }

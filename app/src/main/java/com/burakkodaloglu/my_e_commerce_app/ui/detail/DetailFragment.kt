@@ -2,6 +2,7 @@ package com.burakkodaloglu.my_e_commerce_app.ui.detail
 
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
@@ -9,9 +10,11 @@ import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import com.burakkodaloglu.my_e_commerce_app.R
+import com.burakkodaloglu.my_e_commerce_app.data.model.AddToCart
 import com.burakkodaloglu.my_e_commerce_app.databinding.FragmentDetailBinding
 import com.burakkodaloglu.my_e_commerce_app.ui.detail.adapters.DetailImagesAdapter
 import com.burakkodaloglu.my_e_commerce_app.util.common.viewBinding
+import com.burakkodaloglu.my_e_commerce_app.util.storage.SharedPrefManager
 import dagger.hilt.android.AndroidEntryPoint
 import java.lang.Math.abs
 
@@ -24,9 +27,14 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         initObserver()
+        val userId = SharedPrefManager.getInstance(requireActivity()).data.userId
+        val cart = args.product
         with(binding) {
             imgFavorite.setOnClickListener { detailViewModel.setFavoriteState() }
             imgBack.setOnClickListener { findNavController().popBackStack() }
+            btnAddCart.setOnClickListener {
+                detailViewModel.addToCart(AddToCart(userId, cart.id))
+            }
         }
     }
 
@@ -57,6 +65,17 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
                         if (it) R.drawable.ic_favorite_selected
                         else R.drawable.ic_favorite_unselected
                     )
+                }
+                addCartLiveData.observe(viewLifecycleOwner) {
+                    it.doOnSuccess {
+                        Toast.makeText(
+                            requireContext(),
+                            "Product added to your cart",
+                            Toast.LENGTH_LONG
+                        ).show()
+                    }.doOnFailure {
+                        Toast.makeText(requireContext(), "Error", Toast.LENGTH_LONG).show()
+                    }
                 }
             }
         }

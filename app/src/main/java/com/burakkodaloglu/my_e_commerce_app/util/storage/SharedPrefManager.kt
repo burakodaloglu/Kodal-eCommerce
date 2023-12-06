@@ -9,7 +9,6 @@ class SharedPrefManager private constructor(mCtx: Context) {
         mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE)
     val editor = sharedPreferences.edit()
 
-    //daha once giris yapilmissa cagir
     val isLoggedIn: Boolean
         get() {
             return sharedPreferences.getInt("id", -1) != -1
@@ -24,7 +23,6 @@ class SharedPrefManager private constructor(mCtx: Context) {
             )
         }
 
-    //login oldugunda cagir
     fun saveUser(loginData: LoginResponse) {
         editor.putString("message", loginData.message)
         editor.putInt("status", loginData.status)
@@ -32,7 +30,6 @@ class SharedPrefManager private constructor(mCtx: Context) {
         editor.apply()
     }
 
-    //sign out oldugunda cagir
     fun clear() {
         editor.clear()
         editor.apply()
