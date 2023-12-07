@@ -26,12 +26,11 @@
 </p>
 <p align="center">
   <img src="https://github.com/burakodaloglu/Kodal-eCommerce/assets/74530692/12d1475b-df85-4369-abdc-43b948e0dbf0" width="256" height="600">
-  <img src="https://github.com/burakodaloglu/Kodal-eCommerce/assets/74530692/12e0db2e-dfd0-42e3-bc72-7f655bf0383e" width="256" height="600">
    <img src="https://github.com/burakodaloglu/Kodal-eCommerce/assets/74530692/8e64d43f-054f-4cfe-9bae-bfcf1024f703" width="256" height="600">
+   <img src="https://github.com/burakodaloglu/Kodal-eCommerce/assets/74530692/abe57e5d-0fc7-4e31-b65f-03f82f6a91e2" width="256" height="600">
 </p>
-<p align="center">
-  <img src="https://github.com/burakodaloglu/Kodal-eCommerce/assets/74530692/abe57e5d-0fc7-4e31-b65f-03f82f6a91e2" width="256" height="600">
-
+<p align="center"> 
+<img src="https://github.com/burakodaloglu/Kodal-eCommerce/assets/74530692/12e0db2e-dfd0-42e3-bc72-7f655bf0383e" width="256" height="600">
 </p>
 
 
