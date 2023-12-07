@@ -64,13 +64,13 @@ class SignInFragment : Fragment(R.layout.fragment_sign_in) {
     ): Boolean {
         return when {
             password.isEmpty() -> {
-                binding.etPassword.error = "Lütfen şifrenizi giriniz."
+                binding.etPassword.error = "Your password field is empty."
                 binding.etPassword.requestFocus()
                 false
             }
 
             password.length < 6 -> {
-                binding.etPassword.error = "Şifreniz 6 karakterden az olamaz!"
+                binding.etPassword.error = "Your password can consist of at least 6 characters."
                 binding.etPassword.requestFocus()
                 false
             }
