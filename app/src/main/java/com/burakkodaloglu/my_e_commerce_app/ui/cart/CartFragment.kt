@@ -5,6 +5,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.burakkodaloglu.my_e_commerce_app.R
 import com.burakkodaloglu.my_e_commerce_app.data.model.ClearCart
 import com.burakkodaloglu.my_e_commerce_app.databinding.FragmentCartBinding
@@ -39,9 +40,6 @@ class CartFragment : Fragment(R.layout.fragment_cart) {
             cartViewModel.clearCart(ClearCart(userId))
             binding.tvTotalAmount.setText("0.0$")
         }
-        binding.btnBuyNow.setOnClickListener {
-
-        }
     }
 
     private fun initObserver() {
@@ -55,6 +53,9 @@ class CartFragment : Fragment(R.layout.fragment_cart) {
                             cartAdapter.apply {
                                 rvCartProucts.setHasFixedSize(true)
                                 rvCartProucts.adapter = cartAdapter
+                            }
+                            btnBuyNow.setOnClickListener {
+                                findNavController().navigate(R.id.action_cartFragment_to_paymentFragment)
                             }
                         }
                     }.doOnFailure {

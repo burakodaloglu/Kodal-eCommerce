@@ -18,7 +18,11 @@
         android:id="@+id/cartFragment"
         android:name="com.burakkodaloglu.my_e_commerce_app.ui.cart.CartFragment"
         android:label="fragment_cart"
-        tools:layout="@layout/fragment_cart" />
+        tools:layout="@layout/fragment_cart" >
+        <action
+            android:id="@+id/action_cartFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
     <fragment
         android:id="@+id/favoriteFragment"
         android:name="com.burakkodaloglu.my_e_commerce_app.ui.favorite.FavoriteFragment"
@@ -42,5 +46,23 @@
         <argument
             android:name="product"
             app:argType="com.burakkodaloglu.my_e_commerce_app.data.model.Product" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentSuccessFragment"
+        android:name="com.burakkodaloglu.my_e_commerce_app.ui.paymentsuccess.PaymentSuccessFragment"
+        android:label="fragment_payment_success"
+        tools:layout="@layout/fragment_payment_success" >
+        <action
+            android:id="@+id/action_paymentSuccessFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.burakkodaloglu.my_e_commerce_app.ui.payment.PaymentFragment"
+        android:label="PaymentFragment"
+        tools:layout="@layout/fragment_payment">
+        <action
+            android:id="@+id/action_paymentFragment_to_paymentSuccessFragment"
+            app:destination="@id/paymentSuccessFragment" />
     </fragment>
 </navigation>

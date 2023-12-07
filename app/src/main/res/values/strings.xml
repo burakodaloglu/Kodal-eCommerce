@@ -23,4 +23,10 @@
     <string name="uppercase_letters">Uppercase Letters</string>
     <string name="digits">Digits</string>
     <string name="special_characters">Special Characters</string>
+    <string name="invalid_cardholder_name">"Please enter cardholder name"</string>
+    <string name="invalid_credit_card_number">"Please enter credit card number"</string>
+    <string name="invalid_month">"Please select month"</string>
+    <string name="invalid_year">"Please select year"</string>
+    <string name="invalid_cvc_code">"Please enter CVC code"</string>
+    <string name="invalid_address">"Please enter address"</string>
 </resources>

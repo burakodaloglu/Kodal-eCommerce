@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="user"
+            type="com.burakkodaloglu.my_e_commerce_app.data.model.User" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="16dp"
+            android:text="Payment"
+            android:textSize="32sp"
+            android:fontFamily="@font/poppins_light"
+            android:textColor="@color/army_green"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_cardholder_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="4dp"
+            app:contentPadding="2dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView10">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_cardholder_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Credit Cart Name"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:errorTextColor="@color/red"
+                app:hintTextColor="@color/army_green">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_cardholder_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_credit_card_number"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="4dp"
+            app:contentPadding="2dp"
+            app:layout_constraintEnd_toEndOf="@+id/cv_cardholder_name"
+            app:layout_constraintStart_toStartOf="@+id/cv_cardholder_name"
+            app:layout_constraintTop_toBottomOf="@+id/cv_cardholder_name">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_credit_card_number"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Credit Card Number"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:errorTextColor="@color/red"
+                app:hintTextColor="@color/army_green">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_credit_card_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789- "
+                    android:inputType="number"
+                    android:maxLength="25"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_expire_on_month"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="4dp"
+            app:contentPadding="2dp"
+            app:layout_constraintStart_toStartOf="@+id/cv_cardholder_name"
+            app:layout_constraintTop_toBottomOf="@+id/cv_credit_card_number">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_expire_on_month"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Month"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:errorTextColor="@color/red"
+                app:hintTextColor="@color/army_green">
+
+                <AutoCompleteTextView
+                    android:id="@+id/act_expire_on_month"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:dropDownHeight="wrap_content"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_expire_on_year"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="4dp"
+            app:contentPadding="2dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cv_expire_on_month"
+            app:layout_constraintStart_toEndOf="@id/cv_expire_on_month"
+            app:layout_constraintTop_toTopOf="@+id/cv_expire_on_month">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_expire_on_year"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Year"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:errorTextColor="@color/red"
+                app:hintTextColor="@color/army_green">
+
+                <AutoCompleteTextView
+                    android:id="@+id/act_expire_on_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:dropDownHeight="wrap_content"
+                    android:inputType="none" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_cvc_code"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="4dp"
+            app:contentPadding="2dp"
+            app:layout_constraintEnd_toEndOf="@+id/cv_expire_on_month"
+            app:layout_constraintStart_toStartOf="@+id/cv_cardholder_name"
+            app:layout_constraintTop_toBottomOf="@+id/cv_expire_on_month">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_cvc_code"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="cvc"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:errorTextColor="@color/red"
+                app:hintTextColor="@color/army_green">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_cvc_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:digits="0123456789- "
+                    android:inputType="number"
+                    android:maxLength="3"
+                    android:singleLine="true" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <TextView
+            android:id="@+id/textView11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Address"
+            android:textSize="16sp"
+            android:textColor="@color/army_green"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/textView10"
+            app:layout_constraintTop_toBottomOf="@+id/cv_cvc_code" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cv_address"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="12dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardElevation="4dp"
+            app:contentPadding="2dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_pay_now"
+            app:layout_constraintEnd_toEndOf="@+id/cv_cardholder_name"
+            app:layout_constraintStart_toStartOf="@+id/cv_cardholder_name"
+            app:layout_constraintTop_toBottomOf="@+id/textView11">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Address"
+                app:boxBackgroundColor="@color/white"
+                app:boxStrokeWidth="0dp"
+                app:boxStrokeWidthFocused="0dp"
+                app:errorTextColor="@color/red"
+                app:hintTextColor="@color/army_green">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_pay_now"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_marginHorizontal="12dp"
+            android:layout_marginBottom="80dp"
+            android:backgroundTint="@color/army_green"
+            android:text="Pay Now"
+            android:textAllCaps="false"
+            app:cornerRadius="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
