@@ -1,5 +1,15 @@
 # Kodal-eCommerce
+###### What technologies did I use in this project?
 
+
+   - MVVM with Clean Architecture
+   - Hilt for Dependency Injection
+   - Retrofit
+   - Coroutines
+   - Room Database
+   - Glide
+   - ViewPager2
+   - Jetpack Navigation Component
 
 
 <br>
