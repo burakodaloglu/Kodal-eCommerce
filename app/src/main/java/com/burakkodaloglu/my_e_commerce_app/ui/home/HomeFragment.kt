@@ -72,7 +72,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                     }.doOnFailure {
                         managerAlertDialog.showAlertDialog(
                             "All Products Error",
-                            (it.toString()),
+                            (it.message),
                             "Close", {}, "", {}, customView = null, false
                         )
                     }
@@ -119,7 +119,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                     }.doOnFailure {
                         managerAlertDialog.showAlertDialog(
                             "",
-                            (it.toString()),
+                            (it.message),
                             "Close", {}, "", {}, customView = null, false
                         )
                     }

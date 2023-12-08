@@ -21,13 +21,13 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
     private val signupViewModel: SignUpViewModel by viewModels()
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initObserver()
 
+        initObserver()
         with(binding) {
             tvDoHaveAnAccount.setOnClickListener {
                 findNavController().navigate(R.id.action_signUpFragment_to_signInFragment)
             }
-            btnLogin.setOnClickListener {
+            btnRegister.setOnClickListener {
                 val email = binding.etEmail.text.toString()
                 val password = binding.etPassword.text.toString()
                 if (checkRegex()) {
@@ -35,7 +35,6 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
                 }
             }
         }
-
     }
 
     private fun initObserver() {
@@ -46,7 +45,7 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
             }.doOnFailure {
                 managerAlertDialog.showAlertDialog(
                     "",
-                    (it.toString()),
+                    (it.message),
                     "Tamam", {}, "", {}, customView = null, false
                 )
             }
@@ -65,9 +64,11 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
 
         if (email.isEmpty()) {
             binding.tilEmail.helperText = "Your email field is empty."
+            check=false
         }
         if (password.isEmpty()) {
             binding.tilPassword.helperText = "Your password field is empty."
+            check=false
         }
         if (password.length < 6) {
             binding.tilEmail.helperText = "Your password can consist of at least 6 characters."

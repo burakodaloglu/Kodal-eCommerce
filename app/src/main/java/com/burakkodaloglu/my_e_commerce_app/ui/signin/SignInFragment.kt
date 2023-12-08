@@ -31,9 +31,7 @@ class SignInFragment : Fragment(R.layout.fragment_sign_in) {
             loginBtn.setOnClickListener {
                 val email = binding.etEmail.text.toString()
                 val password = binding.etPassword.text.toString()
-                if (Patterns.EMAIL_ADDRESS.matcher(email)
-                        .matches() && isEligibleToLogin(password)
-                ) {
+                if (checkRegex()) {
                     signInViewModel.signin(Login(email, password))
                 }
             }
@@ -59,23 +57,29 @@ class SignInFragment : Fragment(R.layout.fragment_sign_in) {
         }
     }
 
-    private fun isEligibleToLogin(
-        password: String
-    ): Boolean {
-        return when {
-            password.isEmpty() -> {
-                binding.etPassword.error = "Your password field is empty."
-                binding.etPassword.requestFocus()
-                false
-            }
+    fun checkRegex(): Boolean {
+        val email = binding.etEmail.text.toString()
+        val password = binding.etPassword.text.toString()
+        var check = true
+        val mailRegex = "(\\W|^)[\\w.+\\-]*@gmail\\.com(\\W|\$)".toRegex()
 
-            password.length < 6 -> {
-                binding.etPassword.error = "Your password can consist of at least 6 characters."
-                binding.etPassword.requestFocus()
-                false
-            }
 
-            else -> true
+        if (email.isEmpty()) {
+            binding.tilEmail.helperText = "Your email field is empty."
+            check = false
         }
+        if (!mailRegex.containsMatchIn(email)) {
+            binding.tilEmail.helperText = "Enter you gmail. (ex: @gmail.com)"
+            check = false
+        }
+        if (password.isEmpty()) {
+            binding.tilPassword.helperText = "Your password field is empty."
+            check = false
+        }
+        if (password.length < 6) {
+            binding.tilPassword.helperText = "Your password can consist of at least 6 characters."
+            check = false
+        }
+        return check
     }
 }

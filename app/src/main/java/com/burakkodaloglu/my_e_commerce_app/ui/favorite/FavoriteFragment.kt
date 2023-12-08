@@ -43,7 +43,7 @@ class FavoriteFragment : Fragment(R.layout.fragment_favorite) {
                     } else {
                         managerAlertDialog.showAlertDialog(
                             "",
-                            (it.toString()),
+                            "Error",
                             "Close", {}, "", {}, customView = null, false
                         )
                     }

@@ -41,7 +41,7 @@ class ProfileFragment : Fragment(R.layout.fragment_profile) {
             }.doOnFailure {
                 managerAlertDialog.showAlertDialog(
                     "",
-                    (it.toString()),
+                    (it.message),
                     "Close", {}, "", {}, customView = null, false
                 )
             }

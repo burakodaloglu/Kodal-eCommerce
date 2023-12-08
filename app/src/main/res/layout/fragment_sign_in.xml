@@ -61,6 +61,8 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
         android:hint="Email"
+        app:helperText=""
+        app:helperTextTextColor="@color/red"
         app:layout_constraintBottom_toTopOf="@+id/til_password"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -98,7 +100,6 @@
             android:layout_height="60dp"
             android:inputType="textPassword" />
     </com.google.android.material.textfield.TextInputLayout>
-
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login_btn"
