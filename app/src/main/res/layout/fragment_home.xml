@@ -40,7 +40,7 @@
                     android:layout_height="match_parent"
                     android:background="@drawable/search_background"
                     app:iconifiedByDefault="false"
-                    app:queryHint="Product, Category" />
+                    app:queryHint="Product" />
             </androidx.cardview.widget.CardView>
 
             <androidx.viewpager2.widget.ViewPager2
