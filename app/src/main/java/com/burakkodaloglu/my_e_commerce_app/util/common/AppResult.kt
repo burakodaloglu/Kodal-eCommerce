@@ -1,5 +1,4 @@
-package com.burakkodaloglu.my_e_commerce_app.domain
-
+package com.burakkodaloglu.my_e_commerce_app.util.common
 
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.Dispatchers

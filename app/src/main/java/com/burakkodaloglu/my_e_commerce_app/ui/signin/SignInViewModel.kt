@@ -3,7 +3,7 @@ package com.burakkodaloglu.my_e_commerce_app.ui.signin
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.burakkodaloglu.my_e_commerce_app.domain.AppResult
+import com.burakkodaloglu.my_e_commerce_app.util.common.AppResult
 import com.burakkodaloglu.my_e_commerce_app.data.model.Login
 import com.burakkodaloglu.my_e_commerce_app.data.model.LoginResponse
 import com.burakkodaloglu.my_e_commerce_app.domain.usecases.login.SignInUseCase

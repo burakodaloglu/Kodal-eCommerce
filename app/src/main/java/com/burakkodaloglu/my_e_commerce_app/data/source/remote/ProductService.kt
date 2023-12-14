@@ -1,7 +1,7 @@
 package com.burakkodaloglu.my_e_commerce_app.data.source.remote
 
 import com.burakkodaloglu.my_e_commerce_app.data.model.AddToCart
-import com.burakkodaloglu.my_e_commerce_app.domain.AppResult
+import com.burakkodaloglu.my_e_commerce_app.util.common.AppResult
 import com.burakkodaloglu.my_e_commerce_app.data.model.CRUD
 import com.burakkodaloglu.my_e_commerce_app.data.model.CategoryResponse
 import com.burakkodaloglu.my_e_commerce_app.data.model.ClearCart

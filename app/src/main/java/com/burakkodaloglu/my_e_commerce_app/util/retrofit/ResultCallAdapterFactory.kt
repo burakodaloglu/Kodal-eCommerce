@@ -1,6 +1,6 @@
 package com.burakkodaloglu.my_e_commerce_app.util.retrofit
 
-import com.burakkodaloglu.my_e_commerce_app.domain.AppResult
+import com.burakkodaloglu.my_e_commerce_app.util.common.AppResult
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Deferred
 import kotlinx.coroutines.Dispatchers

@@ -5,7 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.burakkodaloglu.my_e_commerce_app.data.model.CRUD
 import com.burakkodaloglu.my_e_commerce_app.data.model.ClearCart
-import com.burakkodaloglu.my_e_commerce_app.domain.AppResult
+import com.burakkodaloglu.my_e_commerce_app.util.common.AppResult
 import com.burakkodaloglu.my_e_commerce_app.domain.usecases.cart.ClearCartUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch

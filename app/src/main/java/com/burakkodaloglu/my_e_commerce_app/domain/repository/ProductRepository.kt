@@ -11,7 +11,7 @@ import com.burakkodaloglu.my_e_commerce_app.data.model.Product
 import com.burakkodaloglu.my_e_commerce_app.data.model.ProductResponse
 import com.burakkodaloglu.my_e_commerce_app.data.model.Signup
 import com.burakkodaloglu.my_e_commerce_app.data.model.UserResponse
-import com.burakkodaloglu.my_e_commerce_app.domain.AppResult
+import com.burakkodaloglu.my_e_commerce_app.util.common.AppResult
 
 interface ProductRepository {
     suspend fun clearCart(clearCart: ClearCart): AppResult<CRUD>

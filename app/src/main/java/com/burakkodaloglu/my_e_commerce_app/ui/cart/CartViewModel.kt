@@ -9,7 +9,7 @@ import com.burakkodaloglu.my_e_commerce_app.data.model.ClearCart
 import com.burakkodaloglu.my_e_commerce_app.data.model.DeleteCartRequest
 import com.burakkodaloglu.my_e_commerce_app.data.model.Product
 import com.burakkodaloglu.my_e_commerce_app.data.model.ProductResponse
-import com.burakkodaloglu.my_e_commerce_app.domain.AppResult
+import com.burakkodaloglu.my_e_commerce_app.util.common.AppResult
 import com.burakkodaloglu.my_e_commerce_app.domain.usecases.cart.CartParams
 import com.burakkodaloglu.my_e_commerce_app.domain.usecases.cart.ClearCartUseCase
 import com.burakkodaloglu.my_e_commerce_app.domain.usecases.cart.DeleteProductsCartUseCase

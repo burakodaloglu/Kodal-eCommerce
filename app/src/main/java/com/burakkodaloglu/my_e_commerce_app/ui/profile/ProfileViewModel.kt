@@ -3,7 +3,7 @@ package com.burakkodaloglu.my_e_commerce_app.ui.profile
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.burakkodaloglu.my_e_commerce_app.domain.AppResult
+import com.burakkodaloglu.my_e_commerce_app.util.common.AppResult
 import com.burakkodaloglu.my_e_commerce_app.data.model.UserResponse
 import com.burakkodaloglu.my_e_commerce_app.domain.usecases.profile.ProfileUseCase
 import com.burakkodaloglu.my_e_commerce_app.domain.usecases.profile.UseParams

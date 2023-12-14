@@ -8,7 +8,7 @@ import androidx.lifecycle.viewModelScope
 import com.burakkodaloglu.my_e_commerce_app.data.model.AddToCart
 import com.burakkodaloglu.my_e_commerce_app.data.model.CRUD
 import com.burakkodaloglu.my_e_commerce_app.data.model.Product
-import com.burakkodaloglu.my_e_commerce_app.domain.AppResult
+import com.burakkodaloglu.my_e_commerce_app.util.common.AppResult
 import com.burakkodaloglu.my_e_commerce_app.domain.usecases.detail.AddToCartUseCase
 import com.burakkodaloglu.my_e_commerce_app.domain.usecases.favorite.AddFavoriteUseCase
 import com.burakkodaloglu.my_e_commerce_app.domain.usecases.favorite.DeleteProductFavoriteUseCase

@@ -13,7 +13,7 @@ import com.burakkodaloglu.my_e_commerce_app.data.model.Signup
 import com.burakkodaloglu.my_e_commerce_app.data.model.UserResponse
 import com.burakkodaloglu.my_e_commerce_app.data.source.local.ProductDao
 import com.burakkodaloglu.my_e_commerce_app.data.source.remote.ProductService
-import com.burakkodaloglu.my_e_commerce_app.domain.AppResult
+import com.burakkodaloglu.my_e_commerce_app.util.common.AppResult
 import com.burakkodaloglu.my_e_commerce_app.domain.repository.ProductRepository
 import javax.inject.Inject
 

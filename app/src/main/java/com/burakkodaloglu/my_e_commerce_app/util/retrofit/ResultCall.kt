@@ -1,7 +1,7 @@
 package com.burakkodaloglu.my_e_commerce_app.util.retrofit
 
-import com.burakkodaloglu.my_e_commerce_app.domain.AppResult
-import com.burakkodaloglu.my_e_commerce_app.domain.attempt
+import com.burakkodaloglu.my_e_commerce_app.util.common.AppResult
+import com.burakkodaloglu.my_e_commerce_app.util.common.attempt
 import com.burakkodaloglu.my_e_commerce_app.util.error.Error
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
