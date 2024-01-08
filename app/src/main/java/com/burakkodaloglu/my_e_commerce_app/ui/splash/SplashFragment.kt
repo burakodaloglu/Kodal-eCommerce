@@ -1,6 +1,7 @@
 package com.burakkodaloglu.my_e_commerce_app.ui.splash
 
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
@@ -29,6 +30,7 @@ class SplashFragment : Fragment(R.layout.fragment_splash) {
             if (SharedPrefManager.getInstance(requireContext()).data.userId.isNullOrEmpty()) {
                 findNavController().navigate(R.id.splashToSignIn)
             } else {
+                Log.d("UserId", SharedPrefManager.getInstance(requireContext()).data.userId)
                 findNavController().navigate(R.id.action_splashFragment_to_main_graph)
             }
         }

@@ -71,7 +71,7 @@ class SignUpFragment : Fragment(R.layout.fragment_sign_up) {
             check=false
         }
         if (password.length < 6) {
-            binding.tilEmail.helperText = "Your password can consist of at least 6 characters."
+            binding.tilPassword.helperText = "Your password can consist of at least 6 characters."
             check = false
         }
         if (!mailRegex.containsMatchIn(email)) {
